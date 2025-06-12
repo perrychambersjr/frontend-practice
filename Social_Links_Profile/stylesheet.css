@@ -1,0 +1,73 @@
+@import url(https://fonts.google.com/specimen/Inter);
+
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    background-color: hsl(0, 0%, 8%);
+}
+
+.divider {
+    width: auto;
+    height: 7px;
+}
+
+.card {
+    background-color: hsl(0, 0%, 12%);
+    width: 350px;
+    height: 500px;
+    margin: 20px;
+    border-radius: 6px;
+    align-items: center;
+}
+
+.text-group {
+    text-align: center;
+}
+
+h1 {
+    color: hsl(0, 0%, 100%);
+    font-weight: bold;
+}
+
+h3 {
+    color: hsl(75, 94%, 57%);
+    font-weight: bold;
+}
+
+p {
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+}
+
+.btn-group button {
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    display: block; /* Make the buttons appear below each other */
+    width: 80%;
+    padding: 10px;
+    margin: 0 auto;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+}
+
+.btn-group button:hover {
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 8%);
+    font-weight: bold;
+}
+
+img {
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    width: 25%;
+    margin-top: 20px;
+}
