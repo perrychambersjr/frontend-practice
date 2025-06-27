@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --font-family: 'Poppins', sans-serif;
+
+    --fw-light: 200;
+    --fw-regular: 400;
+    --fw-bold: 600;
+
+    --fs-400: 0.9375rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.625rem;
+    --fs-900: 2.5rem;
+
+    --clr-neutral-900: hsl(234, 12%, 34%);
+    --clr-neutral-400: hsl(229, 6%, 66%);
+    --clr-neutral-100: hsl(0, 0%, 98%);
+    --clr-cyan: hsl(180, 58%, 56%);
+    --clr-red: hsl(0, 70%, 60%);
+    --clr-blue: hsl(212, 75%, 62%);
+    --clr-yellow: hsl(34, 89%, 65%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-family);
+    font-weight: var(--fw-regular);
+    line-height: 1.7;
+    color: var(--clr-neutral-400);
+}
+
+body {
+    margin: 0;
+    padding-block-end: 5rem;
+}
+
+h1, h2, h3 {
+    color: var(--clr-neutral-900);
+    line-height: 1.1;
+}
+
+.wrapper {
+    margin-inline: auto;    /* left and right, ignore top and bottom */
+    max-width: 1100px;
+    padding-inline: 2rem;   /* padding for when the screen gets smaller it doesn't touch the edges */
+}
+
+.wrapper--narrow {
+    max-width: 550px;
+}
+
+header {
+    text-align: center;
+    margin-block: 6rem; /* top and bottom */ 
+}
+
+h1 {
+    font-weight: var(--fw-light);
+    font-size: var(--fs-900);
+}
+
+h1 span {
+    font-weight: var(--fw-bold);
+}
+
+header > p {
+    font-size: var(--fs-500);
+}
+
+.layout-grid {
+    --gap: 2rem;
+
+    gap: var(--gap);
+    display: grid;
+}
+
+@media (min-width: 800px) {
+    .layout-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.layout-grid > * {  /* Selects all direct children of.layout-grid */
+    flex: 1; /* Equal-width flex items */
+}
+
+/* used flexbox to align the 3 columns I made horizontally 
+   grid was used to align-content: center which pushed the 2 end
+   boxes down to the center of the page */
+
+.col {
+    display: grid; 
+    align-content: center;
+    gap: 2rem;
+}
+
+.card {
+    --br: .325rem;
+    padding: 2rem;
+    border-radius: var(--br);
+    border-top: var(--br) solid;
+    box-shadow: 0 1rem 1.5rem -0.5rem rgb(0, 50, 100, 0.1);
+}
+
+.card__title {
+    font-size: var(--fs-600);
+    margin: 0;
+    font-weight: var(--fw-bold);
+}
+
+.card__img {
+    display: block; /* margin-left: auto won't work because it's default an inline element */
+    margin-top: 1.5rem;
+    margin-left: auto;
+}
+
+.border-teal {
+    border-color: var(--clr-cyan);
+}
+
+.border-red {
+    border-color: var(--clr-red);
+}
+
+.border-yellow {
+    border-color: var(--clr-yellow);
+}
+
+.border-blue {
+    border-color: var(--clr-blue);
+}
+
