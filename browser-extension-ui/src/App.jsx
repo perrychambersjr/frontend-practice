@@ -17,7 +17,6 @@ function App() {
       <div className="min-h-screen bg-gradient-to-b from-[#EBF2FC] to-[#EEF8F9] dark:from-[#040918] dark:to-[#091540]">
         <div className=" mx-auto pt-8 pb-8 px-4 sm:px-8 md:px-20 lg:px-30">
           <Header themeHandler={toggleTheme} theme={theme}/>
-          <FilterTabs theme={theme}/>
           <main className="">
             <CardList theme={theme}/>
           </main>
