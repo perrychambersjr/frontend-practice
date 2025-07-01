@@ -9,7 +9,6 @@ const CardList = () => {
         try {
             const response = await fetch('http://localhost:3000/extensions');
             const data = await response.json();
-            console.log(data);
             setExtensionList(data);
         } catch (error) {
             console.error(error);
