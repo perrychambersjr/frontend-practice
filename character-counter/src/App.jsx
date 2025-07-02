@@ -1,33 +1,24 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import BgDark from './assets/images/bg-dark-theme.png'
+import BgLight from './assets/images/bg-light-theme.png'
+import Header from './components/Header'
+import TextArea from './components/TextArea'
+import './index.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div style={{ backgroundImage: `url(${BgLight})` }}>
+      <div className="bg-cover bg-center min-h-screen font-normal ml-30 mr-30 mt-5">
+        <Header />
+        <main>
+          <h1 className="mr-60 ml-60 text-6xl font-semibold text-center">Analyze your text in real-time.</h1>
+
+          <TextArea />
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </div>
     </>
   )
 }
