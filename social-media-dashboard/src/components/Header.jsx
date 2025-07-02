@@ -1,8 +1,10 @@
 import React from 'react';
-import { useTheme } from '../App';
 
-const Header = () => {
-  const { theme, setTheme } = useTheme();
+const Header = ({theme, setTheme}) => {
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  }
 
   return (
     <header className="pt-4 md:flex md:flex-row items-center justify-between mb-4 ">

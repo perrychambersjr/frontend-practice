@@ -1,46 +1,7 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-@layer base {
-  :root {
-    /* Accent */
-    --lime-green: hsl(163, 72%, 41%);
-    --bright-red: hsl(356, 69%, 56%);
-    --facebook: hsl(208, 92%, 53%);
-    --twitter: hsl(203, 89%, 53%);
-    --youtube: hsl(348, 97%, 39%);
-    --toggle-light: hsl(230, 22%, 74%);
-
-    /* Instagram Gradient */
-    --instagram-start: hsl(37, 97%, 70%);
-    --instagram-end: hsl(329, 70%, 58%);
-
-    /* Light Theme */
-    --bg: hsl(0, 0%, 100%);
-    --top-bg: hsl(225, 100%, 98%);
-    --card-bg: hsl(227, 47%, 96%);
-    --text: hsl(228, 12%, 44%);
-    --text-dark: hsl(230, 17%, 14%);
-  }
-
-  .dark {
-    --bg: hsl(230, 17%, 14%);
-    --top-bg: hsl(232, 19%, 15%);
-    --card-bg: hsl(228, 28%, 20%);
-    --text: hsl(228, 34%, 66%);
-    --text-dark: hsl(0, 0%, 100%);
-    --toggle-dark-start: hsl(210, 78%, 56%);
-    --toggle-dark-end: hsl(146, 68%, 55%);
-  }
-
-  h1 {
-    @apply text-5xl font-bold text-[var(--text-dark)];
-  }
-  p {
-    @apply text-xs md:text-base text-[var(--text)];
-  }
-
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 .theme-switch {
   position: relative;
