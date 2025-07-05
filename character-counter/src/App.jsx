@@ -1,24 +1,19 @@
-import { useState } from 'react'
-import BgDark from './assets/images/bg-dark-theme.png'
-import BgLight from './assets/images/bg-light-theme.png'
+import { useContext, useState } from 'react'
+
 import Header from './components/Header'
+import Layout from './components/Layout'
 import TextArea from './components/TextArea'
+import { themeContext, ThemeContextProvider } from './context/ThemeContext'
 import './index.css'
 
 function App() {
+  const { theme } = useContext(themeContext);
 
   return (
     <>
-    <div style={{ backgroundImage: `url(${BgLight})` }}>
-      <div className="bg-cover bg-center min-h-screen font-normal ml-30 mr-30 mt-5">
-        <Header />
-        <main>
-          <h1 className="mr-60 ml-60 text-6xl font-semibold text-center">Analyze your text in real-time.</h1>
-
-          <TextArea />
-        </main>
-      </div>
-    </div>
+    <ThemeContextProvider>
+      <Layout />
+    </ThemeContextProvider>
     </>
   )
 }
