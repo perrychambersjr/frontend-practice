@@ -4,6 +4,7 @@ import BgLight from '../assets/images/bg-light-theme.png';
 import { TextContextProvider } from '../context/TextContext';
 import { themeContext } from '../context/ThemeContext';
 import Header from './Header';
+import LetterDensity from './LetterDensity';
 import TextAreaAndFilters from './TextAreaAndFilters';
 
 const Layout = () => {
@@ -20,6 +21,7 @@ const Layout = () => {
                     Analyze your text in real-time.
                 </h1>
                 <TextAreaAndFilters />
+                <LetterDensity />
                 </main>
             </div>
             </div>
