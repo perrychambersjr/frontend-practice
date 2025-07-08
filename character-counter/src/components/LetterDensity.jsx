@@ -5,7 +5,7 @@ const LetterDensity = () => {
   const { letterStats } = useTextContext();
   const [showAll, setShowAll] = useState(false);
 
-  if (!letterStats || letterStats.length === 0) return <p>No letters found</p>;
+  if (!letterStats || letterStats.length === 0) return <p className="dark:text-white">No letters found</p>;
 
   const lettersToShow = showAll ? letterStats : letterStats.slice(0, 5);
 
